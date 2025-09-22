@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Orbitron:wght@400..900&display=swap');
+
+:root{
+    --pri:rgb(120, 0, 0);
+    --sec:rgb(250, 237, 205);
+    --app:rgb(204, 213, 174);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family:"Bungee Shade", sans-serif ;
+}
+
+p,ul,li,a,span{
+    font-family: "Orbitron", sans-serif;
+}
+
+.mybg{
+    background-color: var(--sec);
+}
+
+.mynavbg{
+    background-color: var(--pri);
+}
+
+.mytextcolor{
+    color: var(--sec) !important;
+}
+
+.myfootertextcolor{
+    color: var(--app) !important;
+}
