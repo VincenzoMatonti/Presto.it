@@ -20,8 +20,21 @@ p,ul,li,a,span{
     background-color: var(--sec);
 }
 
+.mybgsec{
+    background-color: var(--app);
+}
+
+.height-custom{
+    min-height: 100vh;
+}
+
+.mybutton{
+    background-color: var(--pri) !important;
+    color: var(--sec) !important;
+}
+
 .mynavbg{
-    background-color: var(--pri);
+    background-color: var(--pri) !important;
 }
 
 .mytextcolor{

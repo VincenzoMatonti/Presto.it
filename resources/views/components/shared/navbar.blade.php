@@ -9,18 +9,30 @@
                 <li class="nav-item">
                     <a class="nav-link active mytextcolor" aria-current="page" href="{{route('homepage')}}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mytextcolor" href="#">Link</a>
-                </li>
+                @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Accesso
+                        Ciao, {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Accedi</a></li>
-                        <li><a class="dropdown-item" href="#">Registrati</a></li>
+                    <ul class="dropdown-menu mynavbg">
+                        <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
+                             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout <i class="fa-solid fa-right-from-bracket mx-1"></i></a>
+                        </li>
+                        <form action="{{route('logout')}}" method="POST" class="d-none" id="form-logout">@csrf</form>
                     </ul>
                 </li>
+                @else
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ciao, utente!
+                    </a>
+                    <ul class="dropdown-menu mynavbg">
+                        <li><a class="dropdown-item mynavbg mytextcolor" href="{{route('login')}}">Accedi<i class="fa-solid fa-door-open mx-3"></i></a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item mynavbg mytextcolor" href="{{route('register')}}">Registrati<i class="fa-solid fa-id-card mx-3"></i></a></li>
+                    </ul>
+                </li>
+                @endauth
             </ul>
             <form class="d-flex " role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
