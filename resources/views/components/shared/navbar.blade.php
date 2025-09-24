@@ -9,6 +9,9 @@
                 <li class="nav-item">
                     <a class="nav-link active mytextcolor" aria-current="page" href="{{route('homepage')}}">Home <i class="fa-solid fa-house-chimney"></i> </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link mytextcolor" aria-current="page"  href="{{route('index.article')}}">Tutti gli articoli <i class="fa-solid fa-newspaper"></i></a>
+                </li>
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
