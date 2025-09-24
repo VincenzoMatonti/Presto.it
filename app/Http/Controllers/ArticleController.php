@@ -13,7 +13,7 @@ class ArticleController extends Controller implements HasMiddleware
     public static function middleware()
     {
         return [
-           new Middleware('auth', only: ['create']),//solo utenti autenticati possono accedere alla pagina create article
+           new Middleware('auth', only: ['create']),//solo utenti autenticati possono accedere alla pagina "create article"
         ];
     }
 
@@ -26,7 +26,13 @@ class ArticleController extends Controller implements HasMiddleware
         return view('article.index',compact('articles'));
     }
 
-    //funzione per creare un articolo
+    //funzione che mostra la pagina di dettaglio dell'articolo
+    public function show(Article $article)
+    {
+       return view('article.show',compact('article'));//show è una funzione parametrica che porta come parametro "article" che inietto nella vista "article.show"
+    }
+
+    //funzione che mostra la pagina per creare un articolo
     public function create()
     {
         return view('article.create');

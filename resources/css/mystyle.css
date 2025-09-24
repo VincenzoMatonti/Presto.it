@@ -53,6 +53,10 @@ main{
     margin-top: 50px;
 }
 
+.color-custom{
+    color: var(--pri) !important;
+}
+
 .card-custom{
     width: 18rem;
 }

@@ -11,3 +11,6 @@ Route::get('/create/article',[ArticleController::class,'create'])->name('create.
 
 //rotta index di tutti gli articoli
 Route::get('/index/article',[ArticleController::class,'index'])->name('index.article');
+
+//rotta di dettaglio dell'articolo
+Route::get('/show/article/{article}',[ArticleController::class,'show'])->name('detail.article');
