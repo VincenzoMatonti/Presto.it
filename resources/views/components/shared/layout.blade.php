@@ -12,11 +12,12 @@
 </head>
 
 <body>
+    
     <x-shared.navbar />
 
-    <div class="min-vh-100">
+    <main class="min-vh-100">
         {{$slot}}
-    </div>
+    </main>
 
     <x-shared.footer />
 </body>

@@ -16,6 +16,10 @@ p,ul,li,a,span{
     font-family: "Orbitron", sans-serif;
 }
 
+main{
+  background-color: var(--sec);
+}
+
 .mybg{
     background-color: var(--sec);
 }
@@ -43,4 +47,12 @@ p,ul,li,a,span{
 
 .myfootertextcolor{
     color: var(--app) !important;
+}
+
+.margin-top-custom{
+    margin-top: 50px;
+}
+
+.card-custom{
+    width: 18rem;
 }

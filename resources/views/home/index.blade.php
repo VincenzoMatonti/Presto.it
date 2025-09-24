@@ -1,14 +1,29 @@
 <x-shared.layout>
     <x-slot:title>Home</x-slot:title>
-    <div class="container-fluid text-center bg-body-tertiary">
-        <div class="row vh-100 justify-content-center align-items-center mybg">
+    <div class="container-fluid text-center bg-body-tertiary margin-top-custom">
+        <div class="row justify-content-center align-items-center mybg">
             <div class="col-12">
-                <h1 class="display-1">Presto.it</h1>
-                <p class="fw-bold display-6">"Trova, compra, vendi: ogni giorno nuove occasioni a portata di click!"</p>
-                <div class="my-3 mt-5">
+                <h1 class="display-1 mt-5">Presto.it</h1>
+                <p class="fw-bold display-6 mt-5">"Trova, compra, vendi: ogni giorno nuove occasioni a portata di click!"</p>
+                <div class="mt-5">
                     @auth
-                     <a href="{{route('create.article')}}" class="btn mybutton">Pubblica un articolo <i class="fa-solid fa-marker"></i> </a>
+                     <a href="{{route('create.article')}}" class="btn mybutton shadow">Pubblica un articolo <i class="fa-solid fa-marker"></i> </a>
                     @endauth
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row justify-content-center align-items-center py-5">
+                    @forelse ($articles as $article)
+                      <div class="col-12 col-md-3">
+                          <x-article.article-card :article="$article" />
+                      </div>
+                    @empty
+                      <div class="col-12">
+                          <h3 class="text-center">
+                             Non sono ancora stati creati articoli
+                          </h3> 
+                      </div>  
+                    @endforelse  
                 </div>
             </div>
         </div>
