@@ -30,7 +30,7 @@
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, {{ Auth::user()->name }} <i class="fa-solid fa-user"></i>
+                        Ciao, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         <li>
