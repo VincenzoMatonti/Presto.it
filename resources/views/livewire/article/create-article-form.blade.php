@@ -37,6 +37,6 @@
       @enderror 
    </div>
    <div class="d-flex justify-content-center">
-      <button type="submit" class="btn mybutton mt-3 shadow" >Crea</button>
+      <button type="submit" class="btn mybutton mt-3 shadow" >Crea articolo<i class="fa-solid fa-wand-magic mx-1"></i></button>
    </div>
 </form>

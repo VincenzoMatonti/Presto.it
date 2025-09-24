@@ -15,7 +15,7 @@
                         <input type="password" class="form-control shadow" id="password"name="password">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="mybutton btn shadow mt-3" type="submit">Accedi</button>
+                        <button class="mybutton btn shadow mt-3" type="submit">Accedi <i class="fa-solid fa-door-open"></i></button>
                     </div>
                 </form>
             </div>

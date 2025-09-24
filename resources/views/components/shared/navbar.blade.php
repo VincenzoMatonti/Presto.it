@@ -7,16 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active mytextcolor" aria-current="page" href="{{route('homepage')}}">Home</a>
+                    <a class="nav-link active mytextcolor" aria-current="page" href="{{route('homepage')}}">Home <i class="fa-solid fa-house-chimney"></i> </a>
                 </li>
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, {{ Auth::user()->name }}
+                        Ciao, {{ Auth::user()->name }} <i class="fa-solid fa-user"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         <li>
-                            <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">Crea articolo</a>
+                            <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">Crea articolo <i class="fa-solid fa-marker"></i> </a>
                         </li>
                         <hr class="dropdown-divider">
                         <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
@@ -28,7 +28,7 @@
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, utente!
+                        Ciao, utente! <i class="fa-solid fa-user"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         <li><a class="dropdown-item mynavbg mytextcolor" href="{{route('login')}}">Accedi<i class="fa-solid fa-door-open mx-3"></i></a></li>
@@ -40,7 +40,7 @@
             </ul>
             <form class="d-flex " role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-secondary mytextcolor" type="submit">Search</button>
+                <button class="btn btn-outline-secondary mytextcolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </div>
