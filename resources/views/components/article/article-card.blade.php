@@ -5,7 +5,7 @@
         <h6 class="card-subtitle mb-2 text-body-secondary">{{$article->price}}</h6>
         <div class="d-flex justify-content-evenly align items center mt-5">
             <a href="{{ route('detail.article', compact('article')) }}" class="btn mybutton">Dettaglio <i class="fa-solid fa-circle-info"></i></a>
-            <a href="#" class="btn mybutton">Categoria <i class="fa-solid fa-list"></i></a>
+            <a href="{{route('byCategory', [ 'category' => $article->category ])}}" class="btn mybutton">Categoria <i class="fa-solid fa-list"></i></a>
         </div>
     </div>
 </div>

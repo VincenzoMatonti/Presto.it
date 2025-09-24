@@ -14,3 +14,6 @@ Route::get('/index/article',[ArticleController::class,'index'])->name('index.art
 
 //rotta di dettaglio dell'articolo
 Route::get('/show/article/{article}',[ArticleController::class,'show'])->name('detail.article');
+
+//rotta che mostra gli articoli filtrati per categoria
+Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('byCategory');

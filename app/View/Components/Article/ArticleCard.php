@@ -15,6 +15,7 @@ class ArticleCard extends Component
     
     public Article $article;
 
+
     public function __construct( Article $article )
     {
         $this->article = $article;

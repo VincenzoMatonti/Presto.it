@@ -10,7 +10,22 @@
                     <a class="nav-link active mytextcolor" aria-current="page" href="{{route('homepage')}}">Home <i class="fa-solid fa-house-chimney"></i> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mytextcolor" aria-current="page"  href="{{route('index.article')}}">Tutti gli articoli <i class="fa-solid fa-newspaper"></i></a>
+                    <a class="nav-link mytextcolor" aria-current="page" href="{{route('index.article')}}">Tutti gli articoli <i class="fa-solid fa-newspaper"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie <i class="fa-solid fa-list"></i>
+                    </a>
+                    <ul class="dropdown-menu mynavbg">
+                        @foreach ($categories as $category)
+                           <li>
+                               <a class="dropdown-item text-capitalize mynavbg mytextcolor" href="{{route('byCategory', [ 'category' => $category ])}}">{{$category->name}}</a>                            
+                           </li>
+                           @if (!$loop->last)
+                             <hr class="dropdown-divider">
+                           @endif
+                        @endforeach
+                    </ul>
                 </li>
                 @auth
                 <li class="nav-item dropdown">
@@ -23,7 +38,7 @@
                         </li>
                         <hr class="dropdown-divider">
                         <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
-                             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout <i class="fa-solid fa-right-from-bracket mx-1"></i></a>
+                                onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout <i class="fa-solid fa-right-from-bracket mx-1"></i></a>
                         </li>
                         <form action="{{route('logout')}}" method="POST" class="d-none" id="form-logout">@csrf</form>
                     </ul>
