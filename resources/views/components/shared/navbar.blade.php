@@ -28,6 +28,16 @@
                     </ul>
                 </li>
                 @auth
+                @if (Auth::user()->is_revisor)
+                  <li class="nav-item position-relative">
+                     <a href="{{ route('index.revisor') }}" class="nav-link mytextcolor ">Revisor Dashboard <i class="fa-solid fa-briefcase"></i></a>
+                     @if ($revisorCount > 0) 
+                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                         {{$revisorCount}}
+                     </span>
+                     @endif
+                  </li>
+                @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ciao, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>

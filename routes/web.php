@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[PublicController::class,'homepage'])->name('homepage');
@@ -17,3 +18,6 @@ Route::get('/show/article/{article}',[ArticleController::class,'show'])->name('d
 
 //rotta che mostra gli articoli filtrati per categoria
 Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('byCategory');
+
+//rotta che mostra l'index del revisore
+Route::get('/revisor/dashboard',[RevisorController::class,'index'])->middleware('isRevisor')->name('index.revisor');
