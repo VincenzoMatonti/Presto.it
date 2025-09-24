@@ -15,6 +15,10 @@
                         Ciao, {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu mynavbg">
+                        <li>
+                            <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">Crea articolo</a>
+                        </li>
+                        <hr class="dropdown-divider">
                         <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
                              onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout <i class="fa-solid fa-right-from-bracket mx-1"></i></a>
                         </li>

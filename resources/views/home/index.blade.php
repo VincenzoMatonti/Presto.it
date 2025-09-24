@@ -5,6 +5,11 @@
             <div class="col-12">
                 <h1 class="display-1">Presto.it</h1>
                 <p class="fw-bold display-6">"Trova, compra, vendi: ogni giorno nuove occasioni a portata di click!"</p>
+                <div class="my-3 mt-5">
+                    @auth
+                     <a href="{{route('create.article')}}" class="btn mybutton">Pubblica un articolo</a>
+                    @endauth
+                </div>
             </div>
         </div>
     </div>
