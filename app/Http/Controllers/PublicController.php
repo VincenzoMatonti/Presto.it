@@ -24,4 +24,11 @@ class PublicController extends Controller
        $articles = Article::search($query)->where('is_accepted',true)->paginate(8);
        return view('article.searched',['articles' => $articles,'query' => $query]);
     }
+
+    //metodo per cambiare lingua
+    public function setLanguage($lang)
+    {
+      session()->put('locale',$lang);
+      return redirect()->back();
+    }
 }

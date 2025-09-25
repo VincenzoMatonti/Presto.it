@@ -56,7 +56,7 @@
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, utente! <i class="fa-solid fa-user"></i>
+                        {{__('ui.helloUser')}} <i class="fa-solid fa-user"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         <li><a class="dropdown-item mynavbg mytextcolor" href="{{route('login')}}">Accedi<i class="fa-solid fa-door-open mx-3"></i></a></li>
@@ -66,12 +66,17 @@
                 </li>
                 @endauth
             </ul>
-            <form class="d-flex " role="search" action="{{ route('article.search') }}" method="GET">
+            <form class="d-flex mx-2" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
                     <input class="form-control me-2" type="search" name="query" placeholder="Inserisci una parola..." aria-label="Search" />
                     <button class="btn btn-outline-secondary mytextcolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
+            <x-shared._locale lang="de" />
+            <x-shared._locale lang="fr" />
+            <x-shared._locale lang="es" />
+            <x-shared._locale lang="it" />
+            <x-shared._locale lang="en" />
         </div>
     </div>
 </nav>

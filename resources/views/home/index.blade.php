@@ -4,7 +4,7 @@
         <div class="row justify-content-center align-items-center mybg">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="display-1 mt-5">{{env('APP_NAME')}}</h1>
-                <p class="fw-bold display-6 mt-5">"Trova, compra, vendi: ogni giorno nuove occasioni a portata di click!"</p>
+                <p class="fw-bold display-6 mt-5">{{ __('ui.subtitleHome') }}</p>
                 <x-shared.flash-message />
                 <div class="mt-5">
                     @auth
