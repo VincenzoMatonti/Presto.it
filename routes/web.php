@@ -20,6 +20,9 @@ Route::get('/show/article/{article}',[ArticleController::class,'show'])->name('d
 //rotta che mostra gli articoli filtrati per categoria
 Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('byCategory');
 
+//rotta che mostra gli articoli ricercati tramite la ricerca full text
+Route::get('/search/article',[PublicController::class,'searchArticles'])->name('article.search');
+
 //rotta che mostra l'index del revisore
 Route::get('/revisor/dashboard',[RevisorController::class,'index'])->middleware('isRevisor')->name('index.revisor');
 

@@ -18,25 +18,25 @@
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         @foreach ($categories as $category)
-                           <li>
-                               <a class="dropdown-item text-capitalize mynavbg mytextcolor" href="{{route('byCategory', [ 'category' => $category ])}}">{{$category->name}}</a>                            
-                           </li>
-                           @if (!$loop->last)
-                             <hr class="dropdown-divider">
-                           @endif
+                        <li>
+                            <a class="dropdown-item text-capitalize mynavbg mytextcolor" href="{{route('byCategory', [ 'category' => $category ])}}">{{$category->name}}</a>
+                        </li>
+                        @if (!$loop->last)
+                        <hr class="dropdown-divider">
+                        @endif
                         @endforeach
                     </ul>
                 </li>
                 @auth
                 @if (Auth::user()->is_revisor)
-                  <li class="nav-item position-relative">
-                     <a href="{{ route('index.revisor') }}" class="nav-link mytextcolor ">Revisor Dashboard <i class="fa-solid fa-briefcase"></i></a>
-                     @if ($revisorCount > 0) 
-                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                         {{$revisorCount}}
-                     </span>
-                     @endif
-                  </li>
+                <li class="nav-item position-relative">
+                    <a href="{{ route('index.revisor') }}" class="nav-link mytextcolor ">Revisor Dashboard <i class="fa-solid fa-briefcase"></i></a>
+                    @if ($revisorCount > 0)
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{$revisorCount}}
+                    </span>
+                    @endif
+                </li>
                 @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,9 +66,11 @@
                 </li>
                 @endauth
             </ul>
-            <form class="d-flex " role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-secondary mytextcolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form class="d-flex " role="search" action="{{ route('article.search') }}" method="GET">
+                <div class="input-group">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Inserisci una parola..." aria-label="Search" />
+                    <button class="btn btn-outline-secondary mytextcolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </form>
         </div>
     </div>
