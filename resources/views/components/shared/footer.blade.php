@@ -1,32 +1,19 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start mytextcolor mynavbg">
+<footer class="text-center text-lg-start mytextcolor mynavbg shadow border-3">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center  p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
+            <span>Vuoi diventare revisore?</span>
+            <p>Cliccando il bottone farai richiesta al nostro admin!</p>
         </div>
         <!-- Left -->
 
         <!-- Right -->
-        <div>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-github"></i>
+        <div class="d-flex justify-content-center align-items-center">
+            <span class="d-md-none mx-2">Vuoi diventare revisore?</span>
+            <a href="{{ route('become.revisor') }}" class="me-4 text-reset">
+                <i class="fa-solid fa-envelope-open"></i>
             </a>
         </div>
         <!-- Right -->

@@ -1,10 +1,6 @@
 <div class="container mybgsec shadow rounded-3">
 
-    @if (session()->has('message'))
-    <div class="alert alert-success text-center">
-        {{ session('message') }}
-    </div>
-    @endif
+    <x-shared.flash-message />
 
     @if($articleToCheck)
     <div class="row justify-content-center pt-5">

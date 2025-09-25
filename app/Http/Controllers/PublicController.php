@@ -9,8 +9,9 @@ class PublicController extends Controller
     //funzione che restituisce la vista dell'homepage
     public function homepage()
     {
-       //recupero dal DB tramite model Article gli ultimi 6 article in ordine decrescente di data di creazione e inietto la variabile nella vista
-       $articles = Article::take(4)->orderBy('created_at','desc')->get();
+       //recupero dal DB tramite model Article gli ultimi 4 article in ordine decrescente di data di creazione 
+       //inoltre recupero solo gli articoli accettati
+       $articles = Article::where('is_accepted', true)->orderBy('created_at','desc')->take(4)->get();
 
        return view('home.index',compact('articles'));
     }

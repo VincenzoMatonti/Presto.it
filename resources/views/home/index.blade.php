@@ -3,13 +3,9 @@
     <div class="container-fluid text-center bg-body-tertiary margin-top-custom">
         <div class="row justify-content-center align-items-center mybg">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <h1 class="display-1 mt-5">Presto.it</h1>
+                <h1 class="display-1 mt-5">{{env('APP_NAME')}}</h1>
                 <p class="fw-bold display-6 mt-5">"Trova, compra, vendi: ogni giorno nuove occasioni a portata di click!"</p>
-                @if (session()->has('errorMessage'))
-                <div class="alert alert-danger text-center shadow rounded w-50">
-                    {{ session('errorMessage') }}
-                </div>
-                @endif
+                <x-shared.flash-message />
                 <div class="mt-5">
                     @auth
                     <a href="{{route('create.article')}}" class="btn mybutton shadow">Pubblica un articolo <i class="fa-solid fa-marker"></i> </a>

@@ -5,6 +5,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 
+//rotta homepage
 Route::get('/',[PublicController::class,'homepage'])->name('homepage');
 
 //rotta per creare un articolo
@@ -21,3 +22,12 @@ Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name
 
 //rotta che mostra l'index del revisore
 Route::get('/revisor/dashboard',[RevisorController::class,'index'])->middleware('isRevisor')->name('index.revisor');
+
+//rotta per far partire la mail per richiesta di diventare revisore
+Route::get('revisor/request',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+//rotta per rendere un utente revisore
+Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+
+//rotta per rifiutare la richiesta di un utente per diventare revisore
+Route::get('/reject/revisor/{user}',[RevisorController::class,'rejectRevisor'])->name('reject.revisor');
