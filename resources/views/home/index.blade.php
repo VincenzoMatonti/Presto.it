@@ -1,5 +1,5 @@
 <x-shared.layout>
-    <x-slot:title>Home</x-slot:title>
+    <x-slot:title>{{__('ui.home')}}</x-slot:title>
     <div class="container-fluid text-center bg-body-tertiary margin-top-custom">
         <div class="row justify-content-center align-items-center mybg">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
@@ -8,7 +8,7 @@
                 <x-shared.flash-message />
                 <div class="mt-5">
                     @auth
-                    <a href="{{route('create.article')}}" class="btn mybutton shadow">Pubblica un articolo <i class="fa-solid fa-marker"></i> </a>
+                    <a href="{{route('create.article')}}" class="btn mybutton shadow">{{__('ui.publishArticle')}} <i class="fa-solid fa-marker"></i> </a>
                     @endauth
                 </div>
             </div>
@@ -21,7 +21,7 @@
                     @empty
                     <div class="col-12">
                         <h3 class="text-center">
-                            Non sono ancora stati creati articoli
+                            {{__('ui.noArticle')}}
                         </h3>
                     </div>
                     @endforelse

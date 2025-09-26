@@ -19,7 +19,7 @@
                     <ul class="dropdown-menu mynavbg">
                         @foreach ($categories as $category)
                         <li>
-                            <a class="dropdown-item text-capitalize mynavbg mytextcolor" href="{{route('byCategory', [ 'category' => $category ])}}">{{$category->name}}</a>
+                            <a class="dropdown-item text-capitalize mynavbg mytextcolor" href="{{route('byCategory', [ 'category' => $category ])}}">{{__('ui.' . $category->name)}}</a>
                         </li>
                         @if (!$loop->last)
                         <hr class="dropdown-divider">
@@ -30,7 +30,7 @@
                 @auth
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item position-relative">
-                    <a href="{{ route('index.revisor') }}" class="nav-link mytextcolor ">Revisor Dashboard <i class="fa-solid fa-briefcase"></i></a>
+                    <a href="{{ route('index.revisor') }}" class="nav-link mytextcolor ">{{ __('ui.revisorDashboard') }} <i class="fa-solid fa-briefcase"></i></a>
                     @if ($revisorCount > 0)
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         {{$revisorCount}}
@@ -40,11 +40,11 @@
                 @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ciao, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>
+                        {{ __('ui.hello') }}, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
                         <li>
-                            <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">Crea articolo <i class="fa-solid fa-marker"></i> </a>
+                            <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">{{ __('ui.publishArticle') }} <i class="fa-solid fa-marker"></i> </a>
                         </li>
                         <hr class="dropdown-divider">
                         <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
@@ -68,7 +68,7 @@
             </ul>
             <form class="d-flex mx-2" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
-                    <input class="form-control me-2" type="search" name="query" placeholder="Inserisci una parola..." aria-label="Search" />
+                    <input class="form-control me-2" type="search" name="query" placeholder="{{ __('ui.search') }}" aria-label="Search" />
                     <button class="btn btn-outline-secondary mytextcolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>

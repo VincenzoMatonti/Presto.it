@@ -1,6 +1,6 @@
 <x-shared.layout>
-    <x-slot:title>Detail article</x-slot:title>
-    <x-shared.section-title title="Oggetto in primo piano: {{$article->title}}" subtitle="Dettagli, prezzo e categoria: trova subito le informazioni che ti servono." />
+    <x-slot:title>{{__('ui.articleDetail')}}</x-slot:title>
+    <x-shared.section-title title="{{__('featuredItem')}} {{$article->title}}" subtitle="{{__( 'ui.detailPriceCategory')}}" />
     <div class="container mybgsec shadow p-5 rounded-3">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-md-6 mb-3">
@@ -27,16 +27,16 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-3 text-center">
-                <h2 class="display-5"> <span class="fw-bold">Titolo: </span> {{$article->title}} </h2>
+                <h2 class="display-5"> <span class="fw-bold">{{__('ui.title')}}: </span> {{$article->title}} </h2>
                 <div class="d-flex flex-column justify-content-center">
-                    <h4 class="fw-bold">Prezzo: {{$article->price}} €</h4>
-                    <h5>Descrizione</h5>
+                    <h4 class="fw-bold">{{__('ui.price')}}: {{$article->price}} €</h4>
+                    <h5>{{__('ui.description')}}</h5>
                     <p>{{$article->description}}</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="mybg d-flex justify-content-center align-items-center p-3">
-        <a href="{{route('index.article')}}" class="color-custom btn">Tutti gli articoli <i class="fa-solid fa-xmark"></i></a>
+        <a href="{{route('index.article')}}" class="color-custom btn">{{__('ui.allArticles')}} <i class="fa-solid fa-xmark"></i></a>
     </div>
 </x-shared.layout>

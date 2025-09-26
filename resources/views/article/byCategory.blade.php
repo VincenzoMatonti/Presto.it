@@ -1,6 +1,6 @@
 <x-shared.layout>
-    <x-slot:title>Articles by category</x-slot:title>
-    <x-shared.section-title title="Benvenuto nella sezione {{ $category->name }}" subtitle="Tutti gli articoli della categoria selezionata, a portata di click." />
+    <x-slot:title>{{__('ui.articlesByCategory')}}</x-slot:title>
+    <x-shared.section-title title="{{__('ui.welcomeSection')}} {{ __('ui.' . $category->name) }}" subtitle="{{__('ui.articlesInCategory')}}" />
     <div class="container-fluid mybg">
         <div class="row justify-content-center align-items-center py-5">
             @forelse ($articles as $article)
@@ -10,11 +10,11 @@
             @empty
             <div class="col-12 d-flex flex-column align-items-center justify-content-center p-5">
                 <h3 class="text-center my-3">
-                    Non sono ancora stati creati articoli per questa categoria!
+                    {{__('ui.noArticlesInCategory')}}
                 </h3>
                 @auth
                 <div class="mt-5">
-                    <a href="{{route('create.article')}}" class="btn mybutton shadow">Pubblica un articolo <i class="fa-solid fa-marker"></i> </a>
+                    <a href="{{route('create.article')}}" class="btn mybutton shadow">{{__('ui.publishArticle')}} <i class="fa-solid fa-marker"></i> </a>
                 </div>
                 @endauth
             </div>

@@ -16,17 +16,17 @@
         <div class="col-12 col-md-4 ps-4 d-flex flex-column justify-content-between">
           <div>
             <h1>{{$articleToCheck->title}}</h1>
-            <p class="h3">Autore: {{$articleToCheck->user->name}}</p>
+            <p class="h3">{{__('ui.author')}} {{$articleToCheck->user->name}}</p>
             <p class="h4">{{$articleToCheck->price}}€</p>
             <p class="fst-italic text-muted">#{{$articleToCheck->category->name}}</p>
             <p class="h6">{{$articleToCheck->description}}</p>
           </div>
           <div class="d-flex pb-4 justify-content-around">
              <button wire:click="accept({{$articleToCheck}})" class="btn btn-outline-success">
-                 Accetta <i class="fa-solid fa-check"></i>
+                 {{__('ui.accept')}} <i class="fa-solid fa-check"></i>
              </button>
              <button wire:click="reject({{$articleToCheck}})" class="btn btn-outline-danger">
-                 Rifiuta <i class="fa-solid fa-xmark"></i>
+                 {{__('ui.reject')}} <i class="fa-solid fa-xmark"></i>
              </button>
           </div>
         </div>
@@ -34,10 +34,10 @@
     @else
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
-            <h1 class="fst-italic display-4">
-                Nessun articolo da revisionare
+            <h1 class="fst-italic display-4 p-3">
+                {{__('ui.noArticlesToReview')}}
             </h1>
-            <a href="{{route('homepage')}}" class="my-5 btn btn-success">Torna all'homepage <i class="fa-solid fa-house"></i></a>
+            <a href="{{route('homepage')}}" class="my-5 btn btn-success">{{__('ui.backToHome')}} <i class="fa-solid fa-house"></i></a>
         </div>
     </div>
     @endif
