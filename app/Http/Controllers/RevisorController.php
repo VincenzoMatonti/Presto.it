@@ -27,9 +27,9 @@ class RevisorController extends Controller
         //controllo prima che l'utente loggato non è gia revisor
         if (!Auth::user()->is_revisor) {
             Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-            return redirect()->route('homepage')->with('message','Complimenti,Hai richiesto di diventare revisor!');
+            return redirect()->route('homepage')->with('message',__('ui.revisor_request_sent'));
         } else {
-            return redirect()->route('homepage')->with('errorMessage','Sei gia revisor,non puoi mandare una richiesta!');
+            return redirect()->route('homepage')->with('errorMessage',__('ui.revisor_already'));
         }
     }
 

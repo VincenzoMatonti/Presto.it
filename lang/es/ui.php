@@ -62,5 +62,18 @@ return
         'enterDiscover' => 'Entra y descubre nuevas oportunidades cada día.',
         'name' => 'Nombre',
         'joinCommunity' => '¡Únete a nuestra comunidad y comienza a descubrir y compartir artículos únicos!',
+        'title_required' => '¡El título es obligatorio!',
+        'title_min' => '¡El título debe tener al menos 5 caracteres!',
+        'description_required' => 'La descripción es obligatoria',
+        'description_min' => 'La descripción debe tener al menos 10 caracteres',
+        'price_required' => 'El precio es obligatorio',
+        'price_numeric' => '¡Introduce un número!',
+        'category_required' => '¡La categoría es obligatoria!',
+        'article_created' => '¡Artículo creado correctamente!',
+        'revisor_request_sent' => '¡Felicidades, has solicitado convertirte en revisor!',
+        'revisor_already' => 'Ya eres revisor, no puedes enviar una solicitud!',
+        'revisor_area' => 'Zona reservada para revisores',
+        'article_accepted' => 'Has aceptado el artículo ":article"',
+        'article_rejected' => 'Has rechazado el artículo ":article"',
 
     ];

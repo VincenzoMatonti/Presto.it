@@ -38,7 +38,7 @@ class DashboardRevisor extends Component
         // Ricarica il prossimo articolo
         $this->loadArticles();
 
-        session()->flash('message', "Hai accettato l'articolo \"$article->title\"");
+        session()->flash('message', __('ui.article_accepted', ['article' => $article->title]));
     }
 
     //metodo per rifiutare l'articolo
@@ -49,7 +49,7 @@ class DashboardRevisor extends Component
         // Ricarica il prossimo articolo
         $this->loadArticles();
 
-        session()->flash('message', "Hai rifiutato l'articolo \"$article->title\"");
+        session()->flash('message', __('ui.article_rejected', ['article' => $article->title]));
     }
 
     public function render()

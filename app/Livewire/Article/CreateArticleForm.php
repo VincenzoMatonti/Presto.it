@@ -25,13 +25,13 @@ class CreateArticleForm extends Component
     public function messages()
     {
         return [
-           'title.required' => 'Il titolo è obbligatorio!',
-           'title.min' => 'Il titolo deve essere minimo 5 caratteri!',
-           'description.required' => 'La descrizione è obbligatoria',
-           'description.min' => 'La descrizione deve essere minima 10 caratteri',
-           'price.required' => 'Il prezzo è obbligatorio',
-           'price.numeric' => 'Inserisci un numero!',
-           'category.required' => 'La categoria è obbligatoria!',
+            'title.required' => __('ui.title_required'),
+            'title.min' => __('ui.title_min'),
+            'description.required' => __('ui.description_required'),
+            'description.min' => __('ui.description_min'),
+            'price.required' => __('ui.price_required'),
+            'price.numeric' => __('ui.price_numeric'),
+            'category.required' => __('ui.category_required'),
         ];
     }
 
@@ -50,19 +50,18 @@ class CreateArticleForm extends Component
         //valido i campi del form
         $this->validate();
         $this->article = Article::create([
-              'title' => $this->title,
-              'description' => $this->description,
-              'price' => $this->price,
-              'category_id' => $this->category,
-              'user_id' => Auth::id()
+            'title' => $this->title,
+            'description' => $this->description,
+            'price' => $this->price,
+            'category_id' => $this->category,
+            'user_id' => Auth::id()
         ]);
 
         //pulisco i campi del form
         $this->cleanForm();
 
         //do riscontro visivo all'utente della creazione dell'articolo avvenuta con successo
-        session()->flash('success','Articolo creato correttamente!');
-
+        session()->flash('success', __('ui.article_created') );
     }
 
     public function render()

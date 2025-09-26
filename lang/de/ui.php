@@ -62,4 +62,18 @@ return
         'enterDiscover' => 'Einloggen und jeden Tag neue Möglichkeiten entdecken.',
         'name' => 'Name',
         'joinCommunity' => 'Tritt unserer Community bei und entdecke und teile sofort einzigartige Gegenstände!',
+        'title_required' => 'Der Titel ist erforderlich!',
+        'title_min' => 'Der Titel muss mindestens 5 Zeichen lang sein!',
+        'description_required' => 'Die Beschreibung ist erforderlich',
+        'description_min' => 'Die Beschreibung muss mindestens 10 Zeichen lang sein',
+        'price_required' => 'Der Preis ist erforderlich',
+        'price_numeric' => 'Bitte eine Zahl eingeben!',
+        'category_required' => 'Die Kategorie ist erforderlich!',
+        'article_created' => 'Artikel erfolgreich erstellt!',
+        'revisor_request_sent' => 'Glückwunsch, du hast beantragt, Revisor zu werden!',
+        'revisor_already' => 'Du bist bereits Revisor, du kannst keine Anfrage senden!',
+        'revisor_area' => 'Bereich für Revisoren vorbehalten',
+        'article_accepted' => 'Du hast den Artikel ":article" akzeptiert',
+        'article_rejected' => 'Du hast den Artikel ":article" abgelehnt',
+
     ];

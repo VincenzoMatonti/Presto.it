@@ -62,5 +62,18 @@ return
         'enterDiscover' => 'Log in and discover new opportunities every day.',
         'name' => 'Name',
         'joinCommunity' => 'Join our community and start discovering and sharing unique items right away!',
+        'title_required' => 'The title is required!',
+        'title_min' => 'The title must be at least 5 characters!',
+        'description_required' => 'The description is required',
+        'description_min' => 'The description must be at least 10 characters',
+        'price_required' => 'The price is required',
+        'price_numeric' => 'Please enter a number!',
+        'category_required' => 'The category is required!',
+        'article_created' => 'Article created successfully!',
+        'revisor_request_sent' => 'Congratulations, you have requested to become a reviewer!',
+        'revisor_already' => 'You are already a reviewer, you cannot send a request!',
+        'revisor_area' => 'Reserved area for reviewers',
+        'article_accepted' => 'You have accepted the article ":article"',
+        'article_rejected' => 'You have rejected the article ":article"',
 
     ];

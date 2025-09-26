@@ -62,5 +62,19 @@ return
         'enterDiscover' => 'Entra e scopri nuove opportunità ogni giorno.',
         'name' => 'Nome',
         'joinCommunity' => 'Unisciti alla nostra community e inizia subito a scoprire e condividere oggetti unici!',
+        'title_required' => 'Il titolo è obbligatorio!',
+        'title_min' => 'Il titolo deve essere minimo 5 caratteri!',
+        'description_required' => 'La descrizione è obbligatoria',
+        'description_min' => 'La descrizione deve essere minima 10 caratteri',
+        'price_required' => 'Il prezzo è obbligatorio',
+        'price_numeric' => 'Inserisci un numero!',
+        'category_required' => 'La categoria è obbligatoria!',
+        'article_created' => 'Articolo creato correttamente!',
+        'revisor_request_sent' => 'Complimenti, hai richiesto di diventare revisor!',
+        'revisor_already' => 'Sei già revisor, non puoi mandare una richiesta!',
+        'revisor_area' => 'Zona riservata ai revisori',
+        'article_accepted' => 'Hai accettato l\'articolo ":article"',
+        'article_rejected' => 'Hai rifiutato l\'articolo ":article"',
+
 
     ];

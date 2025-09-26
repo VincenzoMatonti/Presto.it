@@ -18,7 +18,7 @@
             <h1>{{$articleToCheck->title}}</h1>
             <p class="h3">{{__('ui.author')}} {{$articleToCheck->user->name}}</p>
             <p class="h4">{{$articleToCheck->price}}€</p>
-            <p class="fst-italic text-muted">#{{$articleToCheck->category->name}}</p>
+            <p class="fst-italic text-muted">#{{__('ui.' . $articleToCheck->category->name)}}</p>
             <p class="h6">{{$articleToCheck->description}}</p>
           </div>
           <div class="d-flex pb-4 justify-content-around">
