@@ -75,5 +75,9 @@ return
         'revisor_area' => 'Zone réservée aux réviseurs',
         'article_accepted' => 'Vous avez accepté l\'article ":article"',
         'article_rejected' => 'Vous avez refusé l\'article ":article"',
-
+        'photo_preview' => 'Aperçu de la photo',
+        'images_error' => 'Chaque fichier doit être une image.',
+        'images_numeric' => 'Vous pouvez télécharger un maximum de 6 images.',
+        'images_max' => 'Chaque image ne doit pas dépasser 1 Mo.',
+        'images_array' => 'Vous pouvez télécharger jusqu\'à 6 images.',
     ];

@@ -1,62 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Orbitron:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Orbitron:wght@400..900&display=swap");
 
-:root{
-    --pri:rgb(120, 0, 0);
-    --sec:rgb(250, 237, 205);
-    --app:rgb(204, 213, 174);
+:root {
+    --pri: rgb(120, 0, 0);
+    --sec: rgb(250, 237, 205);
+    --app: rgb(204, 213, 174);
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family:"Bungee Shade", sans-serif ;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bungee Shade", sans-serif;
 }
 
-p,ul,li,a,span{
+p,
+ul,
+li,
+a,
+span {
     font-family: "Orbitron", sans-serif;
 }
 
-main{
-  background-color: var(--sec);
-}
-
-.mybg{
+main {
     background-color: var(--sec);
 }
 
-.mybgsec{
+.mybg {
+    background-color: var(--sec);
+}
+
+.mybgsec {
     background-color: var(--app);
 }
 
-.height-custom{
+.height-custom {
     min-height: 100vh;
 }
 
-.mybutton{
+.mybutton {
     background-color: var(--pri) !important;
     color: var(--sec) !important;
 }
 
-.mynavbg{
+.mynavbg {
     background-color: var(--pri) !important;
 }
 
-.mytextcolor{
+.mytextcolor {
     color: var(--sec) !important;
 }
 
-.myfootertextcolor{
+.myfootertextcolor {
     color: var(--app) !important;
 }
 
-.margin-top-custom{
+.margin-top-custom {
     margin-top: 50px;
 }
 
-.color-custom{
+.color-custom {
     color: var(--pri) !important;
 }
 
-.card-custom{
+.card-custom {
     width: 18rem;
+}
+
+.img-preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}
+
+.img-style {
+    height: 20rem !important;
+    width: 18rem ;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }

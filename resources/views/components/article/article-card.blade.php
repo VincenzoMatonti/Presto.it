@@ -1,5 +1,6 @@
 <div class="card mx-auto shadow border-2 text-center mb-3 card-custom mybgsec">
-    <img src="https://picsum.photos/200" class="shadow img-fluid rounded-top-2" alt="Immagine dell'articolo {{$article->title}}">
+    <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/200' }}" 
+         class="shadow img-fluid rounded-top-2 img-style " alt="Immagine dell'articolo {{$article->title}}">
     <div class="card-body mybgsec">
         <h5 class="card-title">{{$article->title}}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">{{$article->price}}</h6>

@@ -75,5 +75,9 @@ return
         'revisor_area' => 'Bereich für Revisoren vorbehalten',
         'article_accepted' => 'Du hast den Artikel ":article" akzeptiert',
         'article_rejected' => 'Du hast den Artikel ":article" abgelehnt',
-
+        'photo_preview' => 'Foto-Vorschau',
+        'images_error' => 'Jede Datei muss ein Bild sein.',
+        'images_numeric' => 'Du kannst maximal 6 Bilder hochladen.',
+        'images_max' => 'Jedes Bild darf nicht größer als 1 MB sein.',
+        'images_array' => 'Sie können maximal 6 Bilder hochladen.',
     ];

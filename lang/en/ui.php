@@ -75,5 +75,9 @@ return
         'revisor_area' => 'Reserved area for reviewers',
         'article_accepted' => 'You have accepted the article ":article"',
         'article_rejected' => 'You have rejected the article ":article"',
-
+        'photo_preview' => 'Photo preview',
+        'images_error' => 'Cada archivo debe ser una imagen.',
+        'images_numeric' => 'Puedes subir un máximo de 6 imágenes.',
+        'images_max' => 'Cada imagen no puede superar 1MB.',
+        'images_array' => 'You can upload up to 6 images.',
     ];

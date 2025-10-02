@@ -75,6 +75,10 @@ return
         'revisor_area' => 'Zona riservata ai revisori',
         'article_accepted' => 'Hai accettato l\'articolo ":article"',
         'article_rejected' => 'Hai rifiutato l\'articolo ":article"',
-
-
+        'photo_preview' => 'Anteprima foto',
+        'images_error' => 'Ogni file deve essere un\'immagine.',
+        'images_numeric' => 'Puoi caricare al massimo 6 immagini.',
+        'images_max' => 'Ogni immagine non può superare 1MB.',
+        'images_array' => 'Devi caricare un massimo di 6 immagini.',
+       
     ];
