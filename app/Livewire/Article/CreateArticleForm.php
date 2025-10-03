@@ -2,8 +2,10 @@
 
 namespace App\Livewire\Article;
 
+use App\Jobs\ResizeImage;
 use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -97,13 +99,14 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
         ]);
 
-        //se l’utente ha inserito delle immagini, per ognuna di queste creiamo un oggetto di classe Image
-        //il file sarà salvato nello storage, nel percorso storage/app/public/images
-        //il percorso dell’immagine sarà salvato nella tabella images del database
+        
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 300, 300));
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         //do riscontro visivo all'utente della creazione dell'articolo avvenuta con successo
