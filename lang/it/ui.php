@@ -80,5 +80,12 @@ return
         'images_numeric' => 'Puoi caricare al massimo 6 immagini.',
         'images_max' => 'Ogni immagine non può superare 1MB.',
         'images_array' => 'Devi caricare un massimo di 6 immagini.',
-       
+        'ratings' => 'Valutazioni',
+        'adult' => 'Contenuti per adulti',
+        'violence' => 'Violenza',
+        'spoof' => 'Falsificazione',
+        'racy' => 'Contenuti audaci',
+        'medical' => 'Contenuti medici',
+        'labels' => 'Etichette',
+        'noLabels' => 'Nessuna etichetta',
     ];

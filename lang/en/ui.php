@@ -80,4 +80,12 @@ return
         'images_numeric' => 'Puedes subir un máximo de 6 imágenes.',
         'images_max' => 'Cada imagen no puede superar 1MB.',
         'images_array' => 'You can upload up to 6 images.',
+        'ratings' => 'Ratings',
+        'adult' => 'Adult content',
+        'violence' => 'Violence',
+        'spoof' => 'Spoof',
+        'racy' => 'Racy content',
+        'medical' => 'Medical content',
+        'labels' => 'Labels',
+        'noLabels' => 'No label',
     ];

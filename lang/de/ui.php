@@ -80,4 +80,12 @@ return
         'images_numeric' => 'Du kannst maximal 6 Bilder hochladen.',
         'images_max' => 'Jedes Bild darf nicht größer als 1 MB sein.',
         'images_array' => 'Sie können maximal 6 Bilder hochladen.',
+        'ratings' => 'Bewertungen',
+        'adult' => 'Inhalte für Erwachsene',
+        'violence' => 'Gewalt',
+        'spoof' => 'Fälschung',
+        'racy' => 'Anstößige Inhalte',
+        'medical' => 'Medizinische Inhalte',
+        'labels' => 'Etiketten',
+        'noLabels' => 'Kein Etikett',
     ];

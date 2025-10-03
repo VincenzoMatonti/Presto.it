@@ -80,4 +80,12 @@ return
         'images_numeric' => 'Vous pouvez télécharger un maximum de 6 images.',
         'images_max' => 'Chaque image ne doit pas dépasser 1 Mo.',
         'images_array' => 'Vous pouvez télécharger jusqu\'à 6 images.',
+        'ratings' => 'Évaluations',
+        'adult' => 'Contenu adulte',
+        'violence' => 'Violence',
+        'spoof' => 'Falsification',
+        'racy' => 'Contenu osé',
+        'medical' => 'Contenu médical',
+        'labels' => 'Etiquettes',
+        'noLabels' => 'Aucune étiquette',
     ];
