@@ -97,4 +97,9 @@ return
         'noReject' => 'Actualmente, no hay artículos rechazados en la base de datos.',
         'noAccept' => 'Actualmente, no hay artículos aceptados en la base de datos.',
         'action' => 'Acción',
+        'seller_request_sent' => '¡Felicidades, has solicitado ser vendedor!',
+        'seller_already' => '¡Ya eres vendedor, no puedes enviar una solicitud!',
+        'becameSeller' => '¿Quieres convertirte en vendedor?',
+        'sellerRequest' => '¡Al hacer clic en el botón enviarás una solicitud a nuestro admin!',
+        'seller_area' => '¡Zona reservada para vendedores!',
     ];

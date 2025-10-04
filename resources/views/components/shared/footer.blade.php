@@ -1,23 +1,45 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start mytextcolor mynavbg shadow border-3">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center  p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>{{__('ui.becameRevisor')}}</span>
-            <p>{{__('ui.revisorRequest')}}</p>
-        </div>
-        <!-- Left -->
+    <section class="d-md-flex justify-content-center  p-4 border-bottom">
 
-        <!-- Right -->
-        <div class="d-flex justify-content-center align-items-center">
-            <span class="d-md-none mx-2">{{__('ui.becameRevisor')}}</span>
-            <a href="{{ route('become.revisor') }}" class="me-4 text-reset">
-                <i class="fa-solid fa-envelope-open"></i>
-            </a>
+        <div class="d-flex justify-content-center p-4">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>{{__('ui.becameRevisor')}}</span>
+                <p>{{__('ui.revisorRequest')}}</p>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="d-md-none mx-2">{{__('ui.becameRevisor')}}</span>
+                <a href="{{ route('become.revisor') }}" class="me-4 text-reset">
+                    <i class="fa-solid fa-envelope-open"></i>
+                </a>
+            </div>
+            <!-- Right -->
         </div>
-        <!-- Right -->
+        <div class="d-flex justify-content-center p-4">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>{{__('ui.becameSeller')}}</span>
+                <p>{{__('ui.sellerRequest')}}</p>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="d-md-none mx-2">{{__('ui.becameSeller')}}</span>
+                <a href="{{ route('become.seller') }}" class="me-4 text-reset">
+                    <i class="fa-solid fa-envelope-open"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </div>
+
     </section>
+
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
@@ -49,7 +71,7 @@
                     <p class="text-center">
                         <a href="" class="myfootertextcolor">{{__('ui.ourMission')}}</a>
                     </p>
-                   
+
                 </div>
                 <!-- Grid column -->
 

@@ -13,9 +13,11 @@
                     {{__('ui.noArticlesInCategory')}}
                 </h3>
                 @auth
+                @if (Auth::user()->is_seller)
                 <div class="mt-5">
                     <a href="{{route('create.article')}}" class="btn mybutton shadow">{{__('ui.publishArticle')}} <i class="fa-solid fa-marker"></i> </a>
                 </div>
+                @endif
                 @endauth
             </div>
             @endforelse

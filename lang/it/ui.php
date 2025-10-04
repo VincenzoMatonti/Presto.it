@@ -96,5 +96,10 @@ return
         'rejected' => 'Articoli rifiutati',
         'revision' => 'Revisiona',
         'noReject' => 'Attualmente non esistono articoli rifiutati nel database.',
-        'noAccept' => 'Attualmente non esistono articoli accettati nel database.'
+        'noAccept' => 'Attualmente non esistono articoli accettati nel database.',
+        'seller_request_sent' => 'Complimenti, hai richiesto di diventare venditore!',
+        'seller_already' => 'Sei già venditore, non puoi mandare una richiesta!',
+        'becameSeller' => 'Vuoi diventare venditore?',
+        'sellerRequest' => 'Cliccando il bottone farai richiesta al nostro admin!',
+        'seller_area' => 'Zona riservata ai venditori!',
     ];

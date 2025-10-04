@@ -14,7 +14,7 @@ class ArticleController extends Controller implements HasMiddleware
     public static function middleware()
     {
         return [
-           new Middleware('auth', only: ['create']),//solo utenti autenticati possono accedere alla pagina "create article"
+           new Middleware(['auth' , 'isSeller'], only: ['create']),//solo utenti autenticati possono accedere alla pagina "create article"
         ];
     }
 

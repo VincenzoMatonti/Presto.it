@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Route;
 
 //rotta homepage
@@ -37,3 +38,15 @@ Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->nam
 
 //rotta per rifiutare la richiesta di un utente per diventare revisore
 Route::get('/reject/revisor/{user}',[RevisorController::class,'rejectRevisor'])->name('reject.revisor');
+
+//rotta che mostra l'index del venditore
+Route::get('/seller/dashboard',[SellerController::class,'index'])->middleware('isSeller')->name('index.seller');
+
+//rotta per mandare richiesta per diventare rivenditore
+Route::get('seller/request',[SellerController::class,'becomeSeller'])->middleware('auth')->name('become.seller');
+
+//rotta per rendere un utente venditore 
+Route::get('/make/seller/{user}',[SellerController::class,'makeSeller'])->name('make.seller');
+
+//rotta per rifiutare la richiesta di un utente di diventare venditore
+Route::get('/reject/seller/{user}',[SellerController::class,'rejectSeller'])->name('reject.seller');

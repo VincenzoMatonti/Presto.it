@@ -97,4 +97,9 @@ return
         'revision' => 'Review',
         'noReject' => 'Currently, there are no rejected articles in the database.',
         'noAccept' => 'Currently, there are no accepted articles in the database.',
+        'seller_request_sent' => 'Congratulations, you have requested to become a seller!',
+        'seller_already' => 'You are already a seller, you cannot send a request!',
+        'becameSeller' => 'Do you want to become a seller?',
+        'sellerRequest' => 'By clicking the button you will send a request to our admin!',
+        'seller_area' => 'Area reserved for sellers!',
     ];

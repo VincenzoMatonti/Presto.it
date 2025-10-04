@@ -43,10 +43,12 @@
                         {{ __('ui.hello') }}, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>
                     </a>
                     <ul class="dropdown-menu mynavbg">
+                        @if (Auth::user()->is_seller)
                         <li>
                             <a class="dropdown-item mynavbg mytextcolor" href="{{route('create.article')}}">{{ __('ui.publishArticle') }} <i class="fa-solid fa-marker"></i> </a>
                         </li>
                         <hr class="dropdown-divider">
+                        @endif
                         <li> <a href="#" class="dropdown-item mynavbg mytextcolor"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.logout')}} <i class="fa-solid fa-right-from-bracket mx-1"></i></a>
                         </li>

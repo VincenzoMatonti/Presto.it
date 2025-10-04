@@ -97,4 +97,9 @@ return
         'noReject' => 'Derzeit gibt es keine abgelehnten Artikel in der Datenbank.',
         'noAccept' => 'Derzeit gibt es keine akzeptierten Artikel in der Datenbank.',
         'action' => 'Aktion',
+        'seller_request_sent' => 'Herzlichen Glückwunsch, Sie haben die Anfrage gestellt, Verkäufer zu werden!',
+        'seller_already' => 'Sie sind bereits Verkäufer, Sie können keine Anfrage senden!',
+        'becameSeller' => 'Möchten Sie Verkäufer werden?',
+        'sellerRequest' => 'Durch Klicken auf den Button sendest du eine Anfrage an unseren Admin!',
+        'seller_area' => 'Bereich nur für Verkäufer!',
     ];

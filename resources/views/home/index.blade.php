@@ -8,7 +8,9 @@
                 <x-shared.flash-message />
                 <div class="mt-5">
                     @auth
+                    @if (Auth::user()->is_seller)
                     <a href="{{route('create.article')}}" class="btn mybutton shadow">{{__('ui.publishArticle')}} <i class="fa-solid fa-marker"></i> </a>
+                    @endif
                     @endauth
                 </div>
             </div>

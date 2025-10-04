@@ -97,4 +97,9 @@ return
         'noReject' => 'Actuellement, il n’y a aucun article rejeté dans la base de données.',
         'noAccept' => 'Actuellement, il n’y a aucun article accepté dans la base de données.',
         'action' => 'Action',
+        'seller_request_sent' => 'Félicitations, vous avez demandé à devenir vendeur !',
+        'seller_already' => 'Vous êtes déjà vendeur, vous ne pouvez pas envoyer de demande !',
+        'becameSeller' => 'Voulez-vous devenir vendeur ?',
+        'sellerRequest' => 'En cliquant sur le bouton, vous enverrez une demande à notre admin!',
+        'seller_area' => 'Zone réservée aux vendeurs !',
     ];
