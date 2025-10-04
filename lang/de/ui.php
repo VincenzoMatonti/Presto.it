@@ -106,4 +106,5 @@ return
         'sellerMessage' => 'Verwalten Sie Ihre Produkte, Verkäufe und Kontoeinstellungen.',
         'revisioned' => 'Zu überprüfende Artikel',
         'noReview' => 'Derzeit befinden sich keine Artikel in Überprüfung in der Datenbank.',
+        'article_delete' => 'Artikel erfolgreich gelöscht!',
     ];

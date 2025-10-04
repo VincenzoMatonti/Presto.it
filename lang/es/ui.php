@@ -106,4 +106,5 @@ return
         'sellerMessage' => 'Gestiona tus productos, ventas y la configuración de tu cuenta.',
         'revisioned' => 'Artículos para revisar',
         'noReview' => 'Actualmente no hay artículos en revisión en la base de datos.',
+        'article_delete' => '¡Artículo eliminado con éxito!',
     ];

@@ -19,10 +19,14 @@
             </button>
         </div>
     </div>
+
+    <x-shared.flash-message />
+
     <div class="row justify-content-center my-3">
         <div class="col-12 col-md-2 d-flex justify-content-center align-items-center my-3 flex-column">
+            <p class="text-muted fst-italic small">{{__('ui.publishArticle')}}</p>
             <button wire:click="showCreateArticleForm" class="btn border-3 rounded-3 shadow {{$btnClassesCreate}}">
-                {{$btnTextCreate}} <i class="fa-solid fa-marker"></i> 
+                {{$btnTextCreate}} <i class="fa-solid fa-marker"></i>
             </button>
         </div>
     </div>
@@ -49,7 +53,8 @@
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->price }}</td>
                                 <td>
-                                    <button wire:click="" class="btn btn-danger btn-sm rounded-5 shadow border">{{__('ui.revision')}}<i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="deleteArticle({{ $article->id }})" class="btn btn-danger btn-sm rounded-5 shadow border"><i class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
                             @endforeach
@@ -85,7 +90,8 @@
                                 <td>{{ $art->title }}</td>
                                 <td>{{ $art->price }}</td>
                                 <td>
-                                    <button wire:click="" class="btn btn-danger btn-sm rounded-5 shadow border">{{__('ui.revision')}}<i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="deleteArticle({{ $art->id }})" class="btn btn-danger btn-sm rounded-5 shadow border"><i class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
                             @endforeach
@@ -111,7 +117,7 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">{{__('ui.title')}}</th>
                                 <th scope="col">{{__('ui.price')}}</th>
-                                <th scope="col">{{__('ui.action')}}</th>
+                                <th scope="col">{{__('ui.category')}}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -120,9 +126,7 @@
                                 <th scope="row">{{ $a->id }}</th>
                                 <td>{{ $a->title }}</td>
                                 <td>{{ $a->price }}</td>
-                                <td>
-                                    <button wire:click="" class="btn btn-danger btn-sm rounded-5 shadow border">{{__('ui.revision')}}<i class="fa-solid fa-pen-to-square"></i></button>
-                                </td>
+                                <td>{{ $a->category->name }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -142,7 +146,7 @@
     </div>
     <div class="row p-5">
         @if ($showFormCreate)
-         <livewire:article.create-article-form />
+        <livewire:article.create-article-form />
         @endif
     </div>
 </div>

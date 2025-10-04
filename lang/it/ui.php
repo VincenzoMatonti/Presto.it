@@ -106,4 +106,5 @@ return
         'sellerDashboard' => 'Pannello del Venditore',
         'sellerMessage' => 'Gestisci i tuoi articoli, le vendite e le impostazioni del tuo account.',
         'revisioned' => 'Articoli da revisionare',
+        'article_delete' => 'Articolo cancellato con successo!',
     ];

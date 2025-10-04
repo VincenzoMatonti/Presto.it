@@ -106,4 +106,5 @@ return
         'sellerMessage' => 'Manage your products, sales, and account settings.',
         'revisioned' => 'Articles to review',
         'noReview' => 'There are currently no articles under review in the database.',
+        'article_delete' => 'Article deleted successfully',
     ];

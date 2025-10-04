@@ -3,6 +3,7 @@
 namespace App\Livewire\Seller;
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -52,9 +53,15 @@ class DashboardSeller extends Component
         $this->btnTextReject = __('ui.table');
         $this->btnTextReview = __('ui.table');
         $this->btnTextCreate = __('ui.publishArticle');
-        $this->articleCheckNumber = Article::where('is_accepted', true)->get();
-        $this->articleRejectNumber = Article::where('is_accepted', false)->get();
-        $this->articleToCheck = Article::where('is_accepted', null)->get();
+        $this->articleCheckNumber = Article::where('user_id', Auth::user()->id)
+            ->where('is_accepted', true)
+            ->get();
+        $this->articleRejectNumber = Article::where('user_id', Auth::user()->id)
+            ->where('is_accepted', false)
+            ->get();
+        $this->articleToCheck = Article::where('user_id', Auth::user()->id)
+            ->where('is_accepted', null)
+            ->get();
     }
 
     //metodo per mostrare o chiudere la tabella degli articoli accettati
@@ -113,12 +120,28 @@ class DashboardSeller extends Component
         }
     }
 
+    //metodo per eliminare un articolo
+    public function deleteArticle(Article $article)
+    {
+        $article->delete();
+        session()->flash('message', __('ui.article_delete'));
+    }
+
     public function render()
     {
         return view('livewire.seller.dashboard-seller', [
-            'articleCheck' => Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(8),
-            'articleReject' => Article::where('is_accepted', false)->orderBy('created_at', 'desc')->paginate(8),
-            'articleReview' => Article::where('is_accepted', null)->orderBy('created_at', 'desc')->paginate(8),
+            'articleCheck' => Article::where('user_id', Auth::user()->id)
+                ->where('is_accepted', true)
+                ->orderBy('created_at', 'desc')
+                ->paginate(8),
+            'articleReject' => Article::where('user_id', Auth::user()->id)
+                ->where('is_accepted', false)
+                ->orderBy('created_at', 'desc')
+                ->paginate(8),
+            'articleReview' => Article::where('user_id', Auth::user()->id)
+                ->where('is_accepted', null)
+                ->orderBy('created_at', 'desc')
+                ->paginate(8),
         ]);
     }
 }
