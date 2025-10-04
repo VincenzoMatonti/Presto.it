@@ -46,6 +46,7 @@ return
         'firstStepProfit' => 'Il primo passo per trasformare ciò che non usi in guadagno',
         'title' => 'Titolo',
         'price' => 'Prezzo',
+        'action' => 'Azione',
         'description' => 'Descrizione',
         'articleDetail' => "Dettaglio dell'articolo",
         'featuredItem' => 'Oggetto in primo piano:',
@@ -75,6 +76,7 @@ return
         'revisor_area' => 'Zona riservata ai revisori',
         'article_accepted' => 'Hai accettato l\'articolo ":article"',
         'article_rejected' => 'Hai rifiutato l\'articolo ":article"',
+        'article_revisioned' => 'Articolo mandato in revisione con successo',
         'photo_preview' => 'Anteprima foto',
         'images_error' => 'Ogni file deve essere un\'immagine.',
         'images_numeric' => 'Puoi caricare al massimo 6 immagini.',
@@ -88,4 +90,11 @@ return
         'medical' => 'Contenuti medici',
         'labels' => 'Etichette',
         'noLabels' => 'Nessuna etichetta',
+        'table' => 'Apri tabella',
+        'operation' => 'Annulla operazione',
+        'accepted' => 'Articoli accettati',
+        'rejected' => 'Articoli rifiutati',
+        'revision' => 'Revisiona',
+        'noReject' => 'Attualmente non esistono articoli rifiutati nel database.',
+        'noAccept' => 'Attualmente non esistono articoli accettati nel database.'
     ];

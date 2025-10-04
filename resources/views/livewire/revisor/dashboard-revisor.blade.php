@@ -13,19 +13,19 @@
                         <div class="row g-0 mybg rounded-3 shadow">
                             <div class="col-4 col-md-4 d-flex justify-content-center align-items-center p-2">
                                 <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow"
-                                alt="Immagine {{$key + 1}} dell'articolo '{{$articleToCheck->title}}">
+                                    alt="Immagine {{$key + 1}} dell'articolo '{{$articleToCheck->title}}">
                             </div>
                             <div class="col-3 col-md-3 ps-3">
-                               <div class="card-body">
-                                <h6 class="text-center fst-italic ">{{__('ui.labels')}}</h6>
-                                @if ($image->labels)
-                                   @foreach ($image->labels as $label)
-                                       #{{ $label }}, 
-                                   @endforeach
-                                @else
-                                   <p class="fst-italic"> {{ __('ui.noLabels') }} </p>
-                                @endif
-                               </div>
+                                <div class="card-body">
+                                    <h6 class="text-center fst-italic ">{{__('ui.labels')}}</h6>
+                                    @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                    #{{ $label }},
+                                    @endforeach
+                                    @else
+                                    <p class="fst-italic"> {{ __('ui.noLabels') }} </p>
+                                    @endif
+                                </div>
                             </div>
                             <div class="col-5 col-md-5 ps-3">
                                 <div class="card-body d-flex justify-content-center align-items-center p-4 flex-column">
@@ -90,9 +90,9 @@
                 @for($i = 0; $i < 6; $i++)
                     <div class="col-6 col-md-4 mb-4 text-center">
                     <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="Immagine segnaposto">
-                    </div>
-                 @endfor
-                @endif
+            </div>
+            @endfor
+            @endif
         </div>
     </div>
     <div class="col-12 ps-4 d-flex flex-column justify-content-between">
@@ -119,9 +119,99 @@
         <h1 class="fst-italic display-4 p-3">
             {{__('ui.noArticlesToReview')}}
         </h1>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <p class="text-muted fst-italic">{{__('ui.accepted')}}: <span class="fs-4 fs-bold text-danger">{{ $articleCheckNumber->count() }}</span></p>
+                <div class="d-flex-justify-content-center mt-3 mb-3">
+                    <button wire:click="showAcceptArticleTable" class="btn border-3 rounded-3 shadow {{$btnClassesAccept}}">{{$btnTextAccept}} <i class="fa-solid fa-hourglass-start"></i></button>
+                </div>
+            </div>
+            <div class="col-4">
+                <p class="text-muted fst-italic">{{__('ui.rejected')}}: <span class="fs-4 fs-bold text-danger">{{ $articleRejectNumber->count() }}</span></p>
+                <div class="d-flex-justify-content-center mt-3 mb-3">
+                    <button wire:click="showRejectArticleTable" class="btn border-3 rounded-3 shadow {{$btnClassesReject}}">{{$btnTextReject}} <i class="fa-solid fa-hourglass-start"></i></button>
+                </div>
+            </div>
+        </div>
         <a href="{{route('homepage')}}" class="my-5 btn btn-success">{{__('ui.backToHome')}} <i class="fa-solid fa-house"></i></a>
     </div>
 </div>
 @endif
 
+<div class="container  p-3">
+    <div class="row justify-content-evenly">
+        @if ($showFormAccept)
+        <div class="col-12 col-md-5 mybg shadow rounded-3 border-3">
+            <p class="fw-bold fs-5">{{__('ui.accepted')}}:</p>
+            @if(count($articleCheck) > 0)
+            <table class="table table-striped  border-3 shadow p-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">{{__('ui.title')}}</th>
+                        <th scope="col">{{__('ui.author')}}</th>
+                        <th scope="col">{{__('ui.action')}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($articleCheck as $article)
+                    <tr>
+                        <th scope="row">{{ $article->id }}</th>
+                        <td>{{ $article->title }}</td>
+                        <td>{{ $article->user->name }}</td>
+                        <td>
+                            <button wire:click="revisionArticle({{$article}})" class="btn btn-danger btn-sm rounded-5 shadow border">{{__('ui.revision')}}<i class="fa-solid fa-pen-to-square"></i></button>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center">
+                <div>
+                    {{ $articleCheck->links() }}
+                </div>
+            </div>
+            @else
+            <p class="text-danger py-1 text-center fw-bold fs-5">{{__('ui.noAccept')}}</p>
+            @endif
+        </div>
+        @endif
+        @if ($showFormReject)
+        <div class="col-12 col-md-5 mybg shadow rounded-3 border-3">
+            <p class="fw-bold fs-5">{{__('ui.rejected')}}:</p>
+            @if(count($articleReject) > 0)
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">{{__('ui.title')}}</th>
+                        <th scope="col">{{__('ui.author')}}</th>
+                        <th scope="col">{{__('ui.action')}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($articleReject as $article)
+                    <tr>
+                        <th scope="row">{{ $article->id }}</th>
+                        <td>{{ $article->title }}</td>
+                        <td>{{ $article->user->name }}</td>
+                        <td>
+                            <button wire:click="revisionArticle({{$article}})" class="btn btn-danger btn-sm rounded-5 shadow border">{{__('ui.revision')}}<i class="fa-solid fa-pen-to-square"></i></button>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center">
+                <div>
+                    {{ $articleReject->links() }}
+                </div>
+            </div>
+            @else
+            <p class="text-danger py-1 text-center fw-bold fs-5">{{__('ui.noReject')}}</p>
+            @endif
+        </div>
+        @endif
+    </div>
+</div>
 </div>
