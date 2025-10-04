@@ -102,4 +102,8 @@ return
         'becameSeller' => '¿Quieres convertirte en vendedor?',
         'sellerRequest' => '¡Al hacer clic en el botón enviarás una solicitud a nuestro admin!',
         'seller_area' => '¡Zona reservada para vendedores!',
+        'sellerDashboard' => 'Panel del Vendedor',
+        'sellerMessage' => 'Gestiona tus productos, ventas y la configuración de tu cuenta.',
+        'revisioned' => 'Artículos para revisar',
+        'noReview' => 'Actualmente no hay artículos en revisión en la base de datos.',
     ];

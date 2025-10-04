@@ -12,7 +12,7 @@
         <p>Nome: {{$user->name}}</p>
         <p>Email: {{$user->email}}</p>
         <p>Se vuoi renderl* venditore,clicca qui:</p>
-        <a href="{{ route('make.seller', compact('user')) }}">Rendi revisore</a>
+        <a href="{{ route('make.seller', compact('user')) }}">Rendi venditore</a>
         <p>Altrimenti rifiuta la richiesta:</p>
         <a href="{{ route('reject.seller', compact('user')) }}">Rifiuta richiesta</a>
     </div>

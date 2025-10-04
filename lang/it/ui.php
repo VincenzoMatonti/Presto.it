@@ -97,9 +97,13 @@ return
         'revision' => 'Revisiona',
         'noReject' => 'Attualmente non esistono articoli rifiutati nel database.',
         'noAccept' => 'Attualmente non esistono articoli accettati nel database.',
+        'noReview' => 'Attualmente non esistono articoli in revisione nel database',
         'seller_request_sent' => 'Complimenti, hai richiesto di diventare venditore!',
         'seller_already' => 'Sei già venditore, non puoi mandare una richiesta!',
         'becameSeller' => 'Vuoi diventare venditore?',
         'sellerRequest' => 'Cliccando il bottone farai richiesta al nostro admin!',
         'seller_area' => 'Zona riservata ai venditori!',
+        'sellerDashboard' => 'Pannello del Venditore',
+        'sellerMessage' => 'Gestisci i tuoi articoli, le vendite e le impostazioni del tuo account.',
+        'revisioned' => 'Articoli da revisionare',
     ];

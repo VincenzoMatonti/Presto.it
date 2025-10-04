@@ -102,4 +102,8 @@ return
         'becameSeller' => 'Möchten Sie Verkäufer werden?',
         'sellerRequest' => 'Durch Klicken auf den Button sendest du eine Anfrage an unseren Admin!',
         'seller_area' => 'Bereich nur für Verkäufer!',
+        'sellerDashboard' => 'Verkäufer-Dashboard',
+        'sellerMessage' => 'Verwalten Sie Ihre Produkte, Verkäufe und Kontoeinstellungen.',
+        'revisioned' => 'Zu überprüfende Artikel',
+        'noReview' => 'Derzeit befinden sich keine Artikel in Überprüfung in der Datenbank.',
     ];

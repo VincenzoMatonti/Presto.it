@@ -102,4 +102,8 @@ return
         'becameSeller' => 'Do you want to become a seller?',
         'sellerRequest' => 'By clicking the button you will send a request to our admin!',
         'seller_area' => 'Area reserved for sellers!',
+        'sellerDashboard' => 'Seller Dashboard',
+        'sellerMessage' => 'Manage your products, sales, and account settings.',
+        'revisioned' => 'Articles to review',
+        'noReview' => 'There are currently no articles under review in the database.',
     ];

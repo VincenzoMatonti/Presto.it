@@ -26,7 +26,7 @@ class SellerController extends Controller
     public function becomeSeller()
     {
         //controllo prima che l'utente loggato non è gia venditore
-        if (!Auth::user()->is_revisor) {
+        if (!Auth::user()->is_seller) {
             Mail::to('admin@presto.it')->send(new BecomeSeller(Auth::user()));
             return redirect()->route('homepage')->with('message', __('ui.seller_request_sent'));
         } else {

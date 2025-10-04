@@ -102,4 +102,9 @@ return
         'becameSeller' => 'Voulez-vous devenir vendeur ?',
         'sellerRequest' => 'En cliquant sur le bouton, vous enverrez une demande à notre admin!',
         'seller_area' => 'Zone réservée aux vendeurs !',
+        'sellerDashboard' => 'Tableau de Bord Vendeur',
+        'sellerMessage' => 'Gérez vos produits, ventes et paramètres de compte.',
+        'revisioned' => 'Articles à réviser',
+        'noReview' => "Il n'y a actuellement aucun article en cours de révision dans la base de données.",
+
     ];

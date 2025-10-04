@@ -38,6 +38,11 @@
                     @endif
                 </li>
                 @endif
+                @if (Auth::user()->is_seller)
+                <li class="nav-item position-relative">
+                    <a href="{{ route('index.seller') }}" class="nav-link mytextcolor ">{{ __('ui.sellerDashboard') }} <i class="fa-solid fa-hand-pointer"></i></a>
+                </li>
+                @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mytextcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.hello') }}, {{ Auth::user()->name }} <i class="fa-solid fa-robot"></i>
