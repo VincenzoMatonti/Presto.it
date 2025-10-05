@@ -69,7 +69,7 @@
                         {{__('ui.aboutUs')}}
                     </p>
                     <p class="text-center">
-                        <a href="" class="myfootertextcolor">{{__('ui.ourMission')}}</a>
+                        <a href="{{route('aboutUs')}}" class="myfootertextcolor">{{__('ui.ourMission')}}</a>
                     </p>
 
                 </div>

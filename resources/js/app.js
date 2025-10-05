@@ -1,3 +1,3 @@
-import './bootstrap';
-import './myscript';
-import 'bootstrap';
+import 'bootstrap'; 
+import './bootstrap'; 
+import './myscript';  

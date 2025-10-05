@@ -85,3 +85,11 @@ main {
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+
+.hero-section {
+    background-image: url(/resources/img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}

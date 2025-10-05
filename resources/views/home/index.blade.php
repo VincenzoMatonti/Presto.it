@@ -6,6 +6,7 @@
                 <h1 class="display-1 mt-5">{{env('APP_NAME')}}</h1>
                 <p class="fw-bold display-6 mt-5">{{ __('ui.subtitleHome') }}</p>
                 <x-shared.flash-message />
+                <x-shared.hero-section />
                 <div class="mt-5">
                     @auth
                     @if (Auth::user()->is_seller)
@@ -16,6 +17,7 @@
             </div>
             <div class="col-12">
                 <div class="row justify-content-center align-items-center py-5">
+                    <h2 class="text-center color-custom pb-5">{{__('ui.ourArticle')}}</h2>
                     @forelse ($articles as $article)
                     <div class="col-12 col-md-3">
                         <x-article.article-card :article="$article" />
@@ -31,4 +33,5 @@
             </div>
         </div>
     </div>
+    <x-shared.animation />
 </x-shared.layout>

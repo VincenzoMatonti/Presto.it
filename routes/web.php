@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 //rotta homepage
 Route::get('/',[PublicController::class,'homepage'])->name('homepage');
 
+//rotta about us
+Route::get('/aboutUs',[PublicController::class,'aboutUs'])->name('aboutUs');
+
 //rotta post per la richiesta di cambio lingua
 Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('setLocale');
 

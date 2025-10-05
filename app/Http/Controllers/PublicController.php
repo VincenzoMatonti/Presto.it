@@ -31,4 +31,10 @@ class PublicController extends Controller
       session()->put('locale',$lang);
       return redirect()->back();
     }
+
+    //metodo che restituisce la vista della pagina chi siamo
+    public function aboutUs()
+    {
+      return view('aboutUs.index');
+    }
 }

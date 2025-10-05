@@ -109,5 +109,9 @@ return
         'article_delete' => 'Article deleted successfully',
         'edit_article' => 'Edit article',
         'article_updated' => 'Article updated successfully!',
-
+        'article' => 'Articles',
+        'ourNumber' => 'Our numbers',
+        'sellArticle' => 'Sold articles',
+        'feedback' => 'Feedback',
+        'ourArticle' => 'Our articles',
     ];

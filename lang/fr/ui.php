@@ -109,4 +109,9 @@ return
         'article_delete' => 'Article supprimé avec succès !',
         'edit_article' => 'Modifier l’article',
         'article_updated' => 'Article modifié avec succès !',
+        'article' => 'Articles',
+        'ourNumber' => 'Nos chiffres',
+        'sellArticle' => 'Articles vendus',
+        'feedback' => 'Avis',
+        'ourArticle' => 'Nos articles',
     ];
