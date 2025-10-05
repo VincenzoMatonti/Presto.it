@@ -6,6 +6,7 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\On;
 
 class DashboardSeller extends Component
 {
@@ -35,6 +36,11 @@ class DashboardSeller extends Component
     public $btnTextCreate;
     public $btnClassesCreate = "mybutton";
 
+    //proprietà per mostrare e chiudere form per modificare articolo
+    public $showFormEdit = false;
+
+    //proprietà per passare l'articolo al form di modifica
+    public $articleEdited;
 
     //dichiaro una proprietà che conterrà solo gli articoli con is_checked su null(cioè da revisionare)
     public $articleToCheck;
@@ -118,6 +124,47 @@ class DashboardSeller extends Component
             $this->btnTextCreate = __('ui.operation');
             $this->btnClassesCreate = "btn-success";
         }
+    }
+
+    //metodo per mostrare il form per modificare gli articoli
+    public function showEditArticleForm($articleId)
+    {
+        // Chiudo eventuali altri form aperti
+        $this->showFormCreate = false;
+        $this->showFormAccept = false;
+        $this->showFormReject = false;
+        $this->showFormReview = false;
+        $this->btnTextAccept = __('ui.table');
+        $this->btnTextReject = __('ui.table');
+        $this->btnTextReview = __('ui.table');
+        $this->btnTextCreate = __('ui.publishArticle');
+        $this->btnClassesAccept = "mybutton";
+        $this->btnClassesReject = "mybutton";
+        $this->btnClassesReview = "mybutton";
+        $this->btnClassesCreate = "mybutton";
+
+        // Trovo l’articolo
+        $this->articleEdited = Article::findOrFail($articleId);
+
+        // Mostro il form di modifica
+        $this->showFormEdit = true;
+    }
+
+    //metodo per chiudere il form di modifica appena aggiornato un articolo   
+    #[On('articleUpdated')]
+    public function onArticleUpdated()
+    {
+        $this->showFormEdit = false;
+        $this->articleEdited = null;
+        session()->flash('success', __('ui.article_updated'));
+    }
+
+    //metodo per chiudere il form di modifica
+    #[On('closeEditForm')]
+    public function handleCloseEditForm()
+    {
+        $this->showFormEdit = false;
+        $this->articleEdited = null;
     }
 
     //metodo per eliminare un articolo

@@ -107,5 +107,6 @@ return
         'revisioned' => 'Articles à réviser',
         'noReview' => "Il n'y a actuellement aucun article en cours de révision dans la base de données.",
         'article_delete' => 'Article supprimé avec succès !',
-
+        'edit_article' => 'Modifier l’article',
+        'article_updated' => 'Article modifié avec succès !',
     ];

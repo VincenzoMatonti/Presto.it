@@ -107,4 +107,6 @@ return
         'sellerMessage' => 'Gestisci i tuoi articoli, le vendite e le impostazioni del tuo account.',
         'revisioned' => 'Articoli da revisionare',
         'article_delete' => 'Articolo cancellato con successo!',
+        'edit_article' => 'Modifica articolo',
+        'article_updated' => 'Articolo modificato con successo!',
     ];

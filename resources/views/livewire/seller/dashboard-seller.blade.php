@@ -53,7 +53,7 @@
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->price }}</td>
                                 <td>
-                                    <button wire:click="" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="showEditArticleForm({{ $article->id }})" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
                                     <button wire:click="deleteArticle({{ $article->id }})" class="btn btn-danger btn-sm rounded-5 shadow border"><i class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
@@ -90,7 +90,7 @@
                                 <td>{{ $art->title }}</td>
                                 <td>{{ $art->price }}</td>
                                 <td>
-                                    <button wire:click="" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button wire:click="showEditArticleForm({{ $art->id }})" class="btn btn-warning btn-sm rounded-5 shadow border"><i class="fa-solid fa-pen-to-square"></i></button>
                                     <button wire:click="deleteArticle({{ $art->id }})" class="btn btn-danger btn-sm rounded-5 shadow border"><i class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
@@ -147,6 +147,9 @@
     <div class="row p-5">
         @if ($showFormCreate)
         <livewire:article.create-article-form />
+        @endif
+        @if ($showFormEdit && $articleEdited)
+        <livewire:article.edit-article-form :article="$articleEdited" />
         @endif
     </div>
 </div>

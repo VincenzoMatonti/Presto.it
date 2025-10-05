@@ -107,4 +107,7 @@ return
         'revisioned' => 'Articles to review',
         'noReview' => 'There are currently no articles under review in the database.',
         'article_delete' => 'Article deleted successfully',
+        'edit_article' => 'Edit article',
+        'article_updated' => 'Article updated successfully!',
+
     ];
